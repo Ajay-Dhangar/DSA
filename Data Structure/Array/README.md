@@ -10,6 +10,6 @@
 
 ### Most Important question in array for exercise:
 
-1. Write a program to reverse an array or string
+1. [Write a program to reverse an array or string](https://github.com/Ajay-Dhangar/DSA/blob/main/Data%20Structure/Array/Ex-1.md)
 2. 
 3. 
