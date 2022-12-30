@@ -3,8 +3,8 @@
 
 #### Given an array (or string), the task is to reverse the array/string.
 ### Examples : 
-  arr[] = 1 2 3 4 5
-  output = 5 4 3 2 1 
+  - intput = 1 2 3 4 5
+  - output = 5 4 3 2 1 
  
 #### To reverse an array or a string in Java, you can use the following approach:
 
