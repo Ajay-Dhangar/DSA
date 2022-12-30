@@ -1,10 +1,14 @@
 
-/**
- * Write a program to reverse an array or string.
- * for example: arr[] = 1 2 3 4 5
- *             output = 5 4 3 2 1 
- */
-public class Main {
+## Write a program to reverse an array or string.
+
+#### Given an array (or string), the task is to reverse the array/string.
+###Examples : 
+  arr[] = 1 2 3 4 5
+  output = 5 4 3 2 1 
+ 
+ 
+ ``` [] java
+public class Ex-1 {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5}; // n=5
         System.out.println("\n");
@@ -33,3 +37,5 @@ public class Main {
         ReverseArray(arr, start+1, end-1);
     }
 }
+
+```
