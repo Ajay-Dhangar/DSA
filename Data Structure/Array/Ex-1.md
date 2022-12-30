@@ -101,7 +101,7 @@ int main()
 
 ```
 ### `python`
-```
+```python
 # Iterative python program to reverse an array
 
 # Function to reverse A[] from start to end
