@@ -2,13 +2,23 @@
 ## Write a program to reverse an array or string.
 
 #### Given an array (or string), the task is to reverse the array/string.
-###Examples : 
+### Examples : 
   arr[] = 1 2 3 4 5
   output = 5 4 3 2 1 
  
+#### To reverse an array or a string in Java, you can use the following approach:
+
+- Initialize two variables, `Start` and `End`, to the start and end indices of the array or string.
+- While `Star`t is less than `End`, swap the elements at indices `Start` and `End`, and increment `Start` and decrement `End`.
+- Return the reversed array or string.
+- Here is an example of how you can implement this approach in Java to reverse an array:
+
+
+### `JAVA`
  
- ``` [] java
-public class Ex-1 {
+```Java []
+
+ public class Ex-1 {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5}; // n=5
         System.out.println("\n");
