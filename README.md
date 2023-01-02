@@ -6,8 +6,8 @@ The term **DSA** stands for **Data Structures and Algorithms**.
 
 ## Topics
 - Complexities
-  - [ ] Time Complexity
-  - [ ] Space Complexity
+  - [x] Time Complexity
+  - [x] Space Complexity
 - Data Structure
   - [ ] Array
   - [ ] String
@@ -21,13 +21,13 @@ The term **DSA** stands for **Data Structures and Algorithms**.
   - [ ] Tree
     
 - Algorithms
-  - [ ] Pattern Searching
+  - [x] Pattern Searching  [Click for exercise](https://github.com/Ajay-Dhangar/DSA/tree/main/Algorithms/1.%20Pattern%20Searching)
   - [ ] Divide & Conquer
   - [ ] Searching
   - [ ] Sorting
   - [ ] Bitwise
   - [ ] Greedy
-  - [ ] Recursion
+  - [x] Recursion  [Click for exercise](https://github.com/Ajay-Dhangar/DSA/tree/main/Algorithms/7.%20Recursion)
   - [ ] Backtracking
   - [ ] Mathematical
   - [ ] Dynamic Programming
