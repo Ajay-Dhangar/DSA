@@ -1,16 +1,18 @@
-# 1. Pattern
+# Algorithms 
 
-## Basic 
+## 1. Pattern
+
+- **Basic** 
 
 For exercise and understanding [click](https://github.com/Ajay-Dhangar/DSA/tree/main/Algorithms/1.%20Pattern%20Searching)
 
-## for DSA
+- **for DSA**
 
 
-# 7. Recursion
+## 7. Recursion
 
-## Basic
+- **Basic**
 
 For exercise and understanding [click](https://github.com/Ajay-Dhangar/DSA/tree/main/Algorithms/7.%20Recursion)
 
-## for DSA
+- **for DSA**
