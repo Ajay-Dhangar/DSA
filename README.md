@@ -1,5 +1,5 @@
 # DSA
-Data structure &amp; algorithms 
+Data structure &amp; algorithms in Java
 
 ### What is DSA?
 The term **DSA** stands for **Data Structures and Algorithms**.
