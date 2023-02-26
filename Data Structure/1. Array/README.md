@@ -117,7 +117,258 @@ System.out.println(isEqual); // Output: true
 ```
 Here's an example program that demonstrates 
 1. [how to use all of the array methods and functions covered in the previous guide:](https://github.com/Ajay-Dhangar/DSA/blob/main/Data%20Structure/1.%20Array/Basic.java)
- 
+
+## some common array algorithms in Java for data structures and algorithms:
+
+### 1. Linear Search:
+
+This algorithm searches for a target value in an array by iterating through each element of the array, comparing it to the target value until it is found or until the end of the array is reached.
+
+```java
+public static int linearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1; // target value not found in the array
+}
+```
+
+### 2. Binary Search:
+
+This algorithm is used to search for a target value in a sorted array. It repeatedly divides the array in half and compares the middle element with the target value until it is found or the subarray being searched becomes empty.
+
+```java
+public static int binarySearch(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length - 1;
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1; // target value not found in the array
+}
+```
+
+### 3. Selection Sort:
+
+This algorithm sorts an array by repeatedly finding the minimum element from the unsorted portion of the array and swapping it with the first element of the unsorted portion.
+
+```java
+public static void selectionSort(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
+```
+
+### 4. Insertion Sort:
+
+This algorithm sorts an array by repeatedly inserting each element of the unsorted portion of the array into its correct position in the sorted portion of the array.
+
+```java
+public static void insertionSort(int[] arr) {
+    for (int i = 1; i < arr.length; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
+
+### 5. Bubble Sort:
+
+This algorithm sorts an array by repeatedly swapping adjacent elements if they are in the wrong order until the array is sorted.
+
+```java
+public static void bubbleSort(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+        for (int j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+```
+
+### 6. Merge Sort:
+
+This algorithm sorts an array by dividing it into two halves, recursively sorting each half, and then merging the two sorted halves back together.
+
+```java
+public static void mergeSort(int[] arr, int left, int right) {
+    if (left < right) {
+        int mid = (left + right) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+
+public static void merge(int[] arr, int left, int mid, int right) {
+    int[] temp = new int[right - left + 1];
+    int i = left;
+    int j = mid + 1;
+    int k = 0;
+    while (i <= mid && j <= right) {
+        if (arr[i] <= arr[j]) {
+            temp[k] = arr[i];
+            i++;
+        } else {
+            temp[k] = arr[j];
+            j++;
+        }
+        k++;
+    }
+    while (i <= mid) {
+        temp[k] = arr[i];
+        i++;
+        k++;
+    }
+    while (j <= right) {
+        temp[k] = arr[j];
+        j++;
+        k++;
+    }
+    for (int m = 0; m < temp.length; m++) {
+        arr[left + m] = temp[m];
+    }
+}
+```
+
+### 7. Quick Sort:
+
+This algorithm sorts an array by selecting a pivot element, partitioning the array around the pivot so that all elements to the left of the pivot are less than or equal to it, and all elements to the right of the pivot are greater than it. Then it recursively sorts the left and right partitions.
+
+```java
+public static void quickSort(int[] arr, int left, int right) {
+    if (left < right) {
+        int pivotIndex = partition(arr, left, right);
+        quickSort(arr, left, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, right);
+    }
+}
+
+public static int partition(int[] arr, int left, int right) {
+    int pivot = arr[right];
+    int i = left - 1;
+    for (int j = left; j < right; j++) {
+        if (arr[j] <= pivot) {
+            i++;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    int temp = arr[i + 1];
+    arr[i + 1] = arr[right];
+    arr[right] = temp;
+    return i + 1;
+}
+```
+
+### 8. Counting Sort:
+
+This algorithm sorts an array of integers by counting the number of occurrences of each element and using that information to reconstruct the sorted array.
+
+```java
+public static void countingSort(int[] arr, int k) {
+    int[] count = new int[k + 1];
+    for (int i = 0; i < arr.length; i++) {
+        count[arr[i]]++;
+    }
+    int index = 0;
+    for (int i = 0; i < count.length; i++) {
+        for (int j = 0; j < count[i]; j++) {
+            arr[index] = i;
+            index++;
+        }
+    }
+}
+```
+
+### 9. Radix Sort:
+
+This algorithm sorts an array of integers by sorting the elements one digit at a time, from the least significant digit to the most significant digit.
+
+```java
+public static void radixSort(int[] arr) {
+    int max = getMax(arr);
+    for (int exp = 1; max / exp > 0; exp *= 10) {
+        countSort(arr, exp);
+    }
+}
+
+public static int getMax(int[] arr) {
+    int max = arr[0];
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+public static void countSort(int[] arr, int exp) {
+    int[] output = new int[arr.length];
+    int[] count = new int[10];
+    for (int i = 0; i < arr.length; i++) {
+        count[(arr[i] / exp) % 10]++;
+    }
+    for (int i = 1; i < 10; i++) {
+        count[i] += count[i - 1];
+    }
+    for (int i = arr.length - 1; i >= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
+    }
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] = output[i];
+    }
+}
+```
+
+### 10. Shell Sort:
+
+This algorithm is a variation of insertion sort, where the array is sorted in subarrays of decreasing size, before finally sorting the entire array.
+
+```java
+public static void shellSort(int[] arr) {
+    int n = arr.length;
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; i++) {
+            int temp = arr[i];
+            int j;
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                arr[j] = arr[j - gap];
+            }
+            arr[j] = temp;
+        }
+    }
+}
+```
 ## Conclusion
 
 Arrays are a fundamental data structure in programming that allow you to store and manipulate collections of data in a structured way. Understanding how to declare, initialize, create, retrieve, and perform other operations on arrays is an important skill for any programmer.
