@@ -115,9 +115,9 @@ int[] arr2 = {1, 2, 3};
 boolean isEqual = Arrays.equals(arr1, arr2);
 System.out.println(isEqual); // Output: true
 ```
-Here's an example program that demonstrates how to use all of the array methods and functions covered in the previous guide:
-1. [Basic]()
-2. 
+Here's an example program that demonstrates 
+1. [how to use all of the array methods and functions covered in the previous guide:](https://github.com/Ajay-Dhangar/DSA/blob/main/Data%20Structure/1.%20Array/Basic.java)
+ 
 ## Conclusion
 
 Arrays are a fundamental data structure in programming that allow you to store and manipulate collections of data in a structured way. Understanding how to declare, initialize, create, retrieve, and perform other operations on arrays is an important skill for any programmer.
