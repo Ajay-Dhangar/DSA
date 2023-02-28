@@ -9,8 +9,8 @@ The term **DSA** stands for **Data Structures and Algorithms**.
   - [x] Time Complexity
   - [x] Space Complexity
 - Data Structure
-  - [ ] Array
-  - [ ] String
+  - [x] [Array](https://github.com/Ajay-Dhangar/DSA/tree/main/Data%20Structure/1.%20Array)
+  - [ ] [String](https://github.com/Ajay-Dhangar/DSA/tree/main/Data%20Structure/2.%20String)
   - [ ] Linked List
   - [ ] Matrix / Grid
   - [ ] Queue
