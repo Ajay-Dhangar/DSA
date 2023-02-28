@@ -76,6 +76,6 @@ String name = "Alice";
 int age = 30;
 System.out.printf("My name is %s and I am %d years old.", name, age);
 // Output: My name is Alice and I am 30 years old.
-
+```
 These are some of the most common operations that can be performed on strings in Java. 
 With this knowledge, you should be able to start working with strings in your Java programs.
